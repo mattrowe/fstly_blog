@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+ 
+{% load i18n %}
+
+{% block title %}
+    {% trans "Welcome to the test blog!" %}
+{% endblock %}
+
+{% block description %}
+    {% trans "This is a test blog" %}
+{% endblock %}
+   
+{% block content %}
+<div class="clearfix" style="height: 71px;"></div>
+<div class="container-fluid">
+    <div class="container">
+    {% for post in blog_posts %}
+        {% include "_blog_post_detail.html" %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

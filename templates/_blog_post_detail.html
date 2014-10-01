@@ -1,0 +1,8 @@
+<div class="blog-post">
+    <h2 class="blog-post-title"><a href="{% url "DetailView" slug=post.slug %}">{{ post.title }}</a></h2>
+    <p class="blog-post-meta">Posted in: {{ post.blog.title }}</p>
+    {{ post.content|safe }}
+    <ul class="pager">
+        <li><a href="{% url "EditView" post_id=post.id %}">edit</a></li>
+    </ul>
+</div>
